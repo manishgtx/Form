@@ -1,38 +1,182 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #E5E5E5;
+  background: url('./assets/img/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper {
+  width: 376px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
   text-align: center;
+  padding: 40px 10px;
+  background-color: white;
+  min-height: 100vh;
+  max-width: 560px;
+  /* min-height: 611px; */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+@media screen and (min-width: 560px) {
+  .container {
+    min-height: 611px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+  }
+}
+@media screen and (min-width: 560px){
+  .container {
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 660px) {
+  .container {
+    padding: 40px 90px
+  }
+}
+.container h1 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #212121;
+}
+.container p {
+  font-size: 14px;
+  color: #545454;;
+}
+.sub-headings {
+  margin-bottom: 24px;
+}
+form {
+  text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 8px;
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.logo {
+  display: none;
+}
+
+@media screen and (min-width: 1170px) {
+  .logo {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 40px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.terms {
+  font-weight: 400;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%);
+}
+.btn {
+  background-color: #3766E8;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 0;
+  width: 100%;
+  display: block;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+}
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 28px;
+  padding: 10px 12px;
+  border: 1px solid #CED4DA;
+  border-radius: 6px;
+  outline-color: #3766E8;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+input::placeholder {
+  color: #A0A0A0;
+}
+
+.dropdown {
+  padding: 10px 12px;
+  border: 1px solid #CED4DA;
+  border-radius: 6px;
+  color: #A0A0A0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+.dropdown-icon {
+  color: #545454;
+}
+.drop-menu {
+  border-top: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.drop-item {
+  padding: 4px 8px;
+}
+.drop-item:hover {
+  background-color: #3766E8;
+  color: white;
+}
+.margin {
+  margin-bottom: 28px;
+}
+.small-btn {
+  padding: 4px 8px;
+  border-radius: 2px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #F0F0F0;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.selected {
+  background-color: #3766E8;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.selection {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.solid-lines {
+  margin-bottom: 24px;
 }
